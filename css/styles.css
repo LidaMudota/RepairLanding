@@ -1,0 +1,228 @@
+/* Основные стили остаются неизменными */
+
+@font-face {
+    font-family: 'BB';
+    src: url('../font/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BB1';
+    src: url('../font/ukij-qara-bold.ttf') format('truetype');
+}
+
+body {
+    font-family: 'BB1', 'BB', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4A667C; /* Основной цвет */
+    color: #333;
+}
+
+header {
+    background-color: #2E4057; /* Темно-серый с синим оттенком для профессионального вида */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-bottom: 5px solid #1B3A57; /* Темно-синий акцент */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #A0C4E0; /* Светло-синий для контраста */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #88B2CC; /* Более мягкий синий для активного состояния */
+}
+
+section {
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #D9E1E8; /* Светлый серо-голубой фон */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2E4057;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+footer {
+    background-color: #1B3A57;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+form input, form textarea, form button {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 3px solid #A0C4E0; /* Контрастный светло-синий для рамки */
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #88B2CC; /* Более мягкий синий для фокуса */
+    box-shadow: 0 0 8px rgba(136, 178, 204, 0.5);
+}
+
+form button {
+    background-color: #1B3A57; /* Темно-синий цвет */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #16324B; /* Еще темнее для активного состояния */
+    transform: translateY(-2px);
+}
+
+form button:active {
+    background-color: #112B3E; /* Темный цвет для нажатия */
+    transform: translateY(0);
+}
+
+.gallery-item {
+    display: inline-block;
+    width: calc(33% - 15px);
+    margin: 7px;
+    vertical-align: top;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 5px solid #4A667C; /* Основной цвет для границы изображения */
+}
+
+/* Медиазапросы для различных разрешений экрана */
+
+/* Планшеты (до 768px) */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .gallery-item {
+        width: calc(50% - 15px);
+    }
+
+    header {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 14px;
+    }
+}
+
+/* Смартфоны (до 480px) */
+@media (max-width: 480px) {
+    nav ul {
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .gallery-item {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    header {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Очень маленькие экраны (до 320px) */
+@media (max-width: 320px) {
+    header {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
